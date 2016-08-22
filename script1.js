@@ -1,7 +1,7 @@
 var body = document.getElementsByTagName('body')[0];
 var parent = document.getElementById('parent');
+var wrapper = document.getElementsByClassName('wrapper')[0];
 var colorIndicator = document.getElementById('colorIndicator');
-var div = document.getElementsByClassName('gridSquare');
 var divBox;
 var color;
 //********************************creating the grid****************************************************
@@ -10,28 +10,32 @@ for(var i = 0; i < 64; i++) {
   divBox.className = 'gridSquare';
   parent.appendChild(divBox);
 }
-body.appendChild(parent);
+wrapper.appendChild(parent)
+body.appendChild(wrapper);
 
-
-function targetingColor(event) {
-  divBox = event.target.style.backgroundColor;
-}
-
+//***********************************applying the colors************************************************
 
 function pickColor(event) {
   color = getComputedStyle(event.target).backgroundColor;
   colorIndicator.style.backgroundColor = color;
 };
 
-function thisColor (event) {
-  // event.target.style.background = saveColor;
-    if(event.target.className === 'gridSquare') {
-      color = getComputedStyle(event.target).backgroundColor;
+function thisColor(event) {
+  console.log(event.target.style.backgroundColor);
+
+    if (event.target.className === 'gridSquare') {
+      event.target.style.backgroundColor = color;
       console.log(event.target.style.backgroundColor);
   }
 }
-
-divBox.addEventListener('click',thisColor);
+// function thisColor (event) {
+//   // event.target.style.background = saveColor;
+//     if(event.target.className === 'gridSquare') {
+//       color = getComputedStyle(event.target).backgroundColor;
+//       console.log(event.target.style.backgroundColor);
+//   }
+// }
+parent.addEventListener('click', thisColor);
 
 //********************************Colors for Selection**************************************************
 var red = document.getElementById('red');

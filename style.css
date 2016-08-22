@@ -12,12 +12,14 @@ html{
   border-style: solid;
   float:left;
 }
+.wrapper {
+  margin-left:15%;
+  margin-right: 15%;
+  margin-bottom: 40%;
+}
 #parent {
 border: 2px black;
 border-style: hidden;
-margin-left:15%;
-margin-right: 15%;
-margin-bottom: 40%;
 position: relative;
 }
 .colors {
