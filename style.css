@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+body {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 15%;
+}
 html{
   background-color: black;
 }
