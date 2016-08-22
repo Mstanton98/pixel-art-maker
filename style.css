@@ -10,8 +10,8 @@ html{
   background-color: black;
 }
 .gridSquare {
-  padding-bottom: 12.5%;
-  width:12.5%;
+  padding-bottom: 6.25%;
+  width:6.25%;
   border: 0.5px black;
   background-color: white;
   border-style: solid;

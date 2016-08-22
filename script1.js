@@ -5,7 +5,7 @@ var colorIndicator = document.getElementById('colorIndicator');
 var divBox;
 var color;
 //********************************creating the grid****************************************************
-for(var i = 0; i < 64; i++) {
+for(var i = 0; i < 256; i++) {
   divBox = document.createElement('div');
   divBox.className = 'gridSquare';
   parent.appendChild(divBox);
